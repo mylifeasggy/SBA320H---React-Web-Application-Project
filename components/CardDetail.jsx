@@ -1,23 +1,28 @@
 
-const CardDetail = ({card}) => {
-if(!card) {
-    return <p>Loading card</p>
-}
+const CardDetail = ({ card }) => {
+    if (!card) {
+        return <p>Loading card</p>
+    }
 
-console.log("🔮 CardDetail received:", card);
+    console.log("🔮 CardDetail received:", card);
     return (
+
         <div className="container">
-            <h1 className="">{card.card}({card.category})</h1>
+
             <div className="card-container">
+                <h1 id="cardname" >{card.card}({card.category})</h1>
                 <img className="card-image" src={card.image} alt={card.card} />
-                <div className="sections">
-                    <p><strong>❤️ Love:</strong> {card.love}</p>
-                    <p><strong>💼 Career:</strong> {card.career}</p>
-                    <p><strong>💰 Finance:</strong> {card.finance}</p>
-                </div>
             </div>
-            
+            <div className="sections">
+                <h3>  Love </h3>
+                <p>{card.love}</p>
+                <h3>Career</h3> <p> {card.career}</p>
+                <h3> Finance </h3><p> {card.finance}</p>
+            </div>
+
+
         </div>
+
     );
 }
 

@@ -15,22 +15,27 @@ const MainBoard = () => {
 
 	const handleReading = async () => {
 
-		if (!selectedCard) {
+		if (selectedCard===null) {
 			alert("Select a card first")
 			return;
 		}
 
 		try {
 			const data = await TarotReading();
-			if(data && data.cards && data.cards.length > 0 ){
-				setReadingResult(data.cards[0]); 
+			console.log(data)
+
+			if(data && data.success === 1 && data.data){
+				setReadingResult(data.data); 
 				
 			}
 		}catch(e){
 			console.error("Failed to fetch tarot reading:", error);
 		}
 	};
+
 	if(readingResult){
+
+		console.log("✅ Passing to CardDetail:", readingResult);
 		return <CardDetail card={readingResult}/>
 	}
 

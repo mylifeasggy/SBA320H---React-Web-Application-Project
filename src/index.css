@@ -6,9 +6,7 @@
     ;
 }
 
-h1 {
-    color: #c09bd8;
-}
+
 
 .header {
     font-family: "Poppins", sans-serif;
@@ -70,11 +68,53 @@ h1 {
 }
 
 /* CARD DETAIL JSX */
+.container {
 
-.card-detail {
-   
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px grey;
+display: flex;
+
+justify-content: space-evenly;
+margin-top: 100px;
+
+
+
 }
+.card-detail {
+text-align: center;
+  padding: 40px;
+  background: #fff2f7;
+  color: #5e3353;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.card-image {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px grey;
+  margin-bottom: 20px;
+  
+}
+
+.sections p {
+  max-width: 500px;
+  color: #c1121f;
+  font-weight: 400;
+
+  
+}
+
+#cardname {
+    text-align: center;
+    color: #c1121f;
+    font-weight: 400;
+    font-size: medium;
+  
+
+}
+h3 {
+    text-align: center;
+    font-weight: 800;
+     color: #c1121f;
+
+}
+
