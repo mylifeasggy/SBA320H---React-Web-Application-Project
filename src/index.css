@@ -1,6 +1,69 @@
 *{
-    background-color: peachpuff;
+    background-color:white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    margin: 0;
+;
 }
 h1 {
     color: #c09bd8;
+}
+.header {
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+font-size: 100px;
+color: #c1121f;
+display: flex;
+justify-content: center;
+text-align: center;
+margin-top: 100px;
+
+}
+
+.getButton {
+display: flex;
+justify-content: center;
+text-align: center;
+margin-top: 100px;
+}
+
+.getReadingBtn {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #c1121f;
+    font-size: 20px;
+    background-color:white;
+    color:  #c1121f;
+    cursor: pointer;
+}
+.facedown {
+  width: 150px; /* Set a fixed card width */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    /* Absolute positioning to stack them */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    /* Anchor the rotation to the bottom center */
+    transform-origin: bottom center;
+
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth animation */
+
+}
+.cardContainer {
+
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Give it height so cards don't get cut off */
+    margin-top: 50px;
+}
+.card-selected {
+    position: relative; /* All child absolute positions are relative to this */
+    width: 200px;       /* Width of one card */
+    height: 300px;      /* Height of one card */
 }
