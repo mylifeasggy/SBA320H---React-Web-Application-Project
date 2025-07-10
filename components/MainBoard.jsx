@@ -1,0 +1,60 @@
+import { useState } from 'react';
+import { TarotReading } from '../src/api/tarotAPI.js'
+
+const MainBoard = () => {
+
+	const facedowCards = [];
+	for (let i = 0; i < 12; i++) {
+		facedowCards.push(i)
+
+	}
+
+	const [cards, setCards] = useState([]);
+	const [readingResult, setReadingResult] = useState(null)
+	const [selectedCard, setSelectCard] = useState(null)
+
+	const handleReading = async () => {
+
+		if (!selectedCard) {
+			alert("Select a card first")
+			return;
+		}
+
+		try {
+			const data = await TarotReading();
+			if(data && data.cards && data.cards.lenght > 0 ){
+				setReadingResult(data.cards[0]); 
+				
+			}
+		}catch(e){
+			console.error("Failed to fetch tarot reading:", error);
+		}
+	};
+
+	return (
+		<div>
+			<div className='cardContainer'>
+				<div className='card-selected'>
+
+					{facedowCards.map((item, index) => (
+						<img className='facedown'
+							src="/images/thecover.png"
+							alt="Select a card"
+							onClick={()=> setSelectCard(index)}
+						/>)
+					)}
+				</div>
+
+				<div className='getButton'>
+					<button className='getReadingBtn' onClick={handleReading}>Get Tarot Reading</button>
+
+
+				</div>
+
+
+			</div>
+		</div>
+	)
+}
+export default MainBoard;
+
