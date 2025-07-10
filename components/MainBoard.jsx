@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TarotReading } from '../src/api/tarotAPI.js'
+import CardDetail from './CardDetail.jsx';
 
 const MainBoard = () => {
 
@@ -9,7 +10,6 @@ const MainBoard = () => {
 
 	}
 
-	const [cards, setCards] = useState([]);
 	const [readingResult, setReadingResult] = useState(null)
 	const [selectedCard, setSelectCard] = useState(null)
 
@@ -22,7 +22,7 @@ const MainBoard = () => {
 
 		try {
 			const data = await TarotReading();
-			if(data && data.cards && data.cards.lenght > 0 ){
+			if(data && data.cards && data.cards.length > 0 ){
 				setReadingResult(data.cards[0]); 
 				
 			}
@@ -30,14 +30,19 @@ const MainBoard = () => {
 			console.error("Failed to fetch tarot reading:", error);
 		}
 	};
+	if(readingResult){
+		return <CardDetail card={readingResult}/>
+	}
 
 	return (
 		<div>
 			<div className='cardContainer'>
-				<div className='card-selected'>
+			
 
 					{facedowCards.map((item, index) => (
-						<img className='facedown'
+						<img
+						    key={index}
+							className='facedown'
 							src="/images/thecover.png"
 							alt="Select a card"
 							onClick={()=> setSelectCard(index)}
@@ -52,7 +57,7 @@ const MainBoard = () => {
 				</div>
 
 
-			</div>
+			
 		</div>
 	)
 }
