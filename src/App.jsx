@@ -1,12 +1,17 @@
+import Header from "../components/Header"
+import MainBoard from "../components/MainBoard"
 
-import './App.css'
+
 
 function App() {
 
   return (
-    <>
-   
+   <>
+    <Header/>
+    <MainBoard/>
+
     </>
+
   )
 }
 
