@@ -8,12 +8,13 @@ import Horoscopo from "../pages/Horoscopo"
 function App() {
 
   return (
-    <Routes>
-      <Header/>
-      <Route path="/ " element={MainBoard} />
-      <Route path="/Horoscopo" element={Horoscopo} />
-    </Routes>
-
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MainBoard/>} />
+        <Route path="/horoscopo" element={<Horoscopo/>} />
+      </Routes>
+    </div>
   )
 }
 

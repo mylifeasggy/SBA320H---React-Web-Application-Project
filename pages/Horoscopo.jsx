@@ -1,7 +1,7 @@
-
+import { Horoscopo } from "../src/api/horoscopoAPI.js";
 import { Link } from "react-router-dom";
 
-const Horoscopo = () => {
+const HoroscopoDaily = () => {
     return (
 
         <div>
@@ -12,4 +12,4 @@ const Horoscopo = () => {
     );
 }
 
-export default Horoscopo;
+export default HoroscopoDaily;

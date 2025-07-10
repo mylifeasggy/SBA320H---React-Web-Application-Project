@@ -44,9 +44,14 @@
     box-shadow: 0 4px 8px gray;
     cursor: pointer;
     transition: transform 0.3s ease;
- 
     position: relative;
 
+}
+
+.selected {
+  transform: translateY(-30px) scale(1.1);
+  box-shadow: 0 0 30px #c09bd8;
+  z-index: 10;
 }
 
 .cardContainer {
