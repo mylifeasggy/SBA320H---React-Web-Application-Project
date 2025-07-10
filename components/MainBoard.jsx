@@ -15,7 +15,13 @@ const MainBoard = () => {
 
 	const handleReading = async () => {
 
-		if (selectedCard===null) {
+		if(readingResult) {
+			setReadingResult(null);
+			setSelectCard(null);
+			return
+		}
+
+		if (selectedCard === null) {
 			alert("Select a card first")
 			return;
 		}
@@ -24,45 +30,43 @@ const MainBoard = () => {
 			const data = await TarotReading();
 			console.log(data)
 
-			if(data && data.success === 1 && data.data){
-				setReadingResult(data.data); 
-				
+			if (data && data.success === 1 && data.data) {
+				setReadingResult(data.data);
+
 			}
-		}catch(e){
+		} catch (e) {
 			console.error("Failed to fetch tarot reading:", error);
 		}
 	};
 
-	if(readingResult){
 
-		console.log("✅ Passing to CardDetail:", readingResult);
-		return <CardDetail card={readingResult}/>
-	}
 
 	return (
 		<div>
-			<div className='cardContainer'>
-			
 
-					{facedowCards.map((item, index) => (
-						<img
-						    key={index}
-							className='facedown'
-							src="/images/thecover.png"
-							alt="Select a card"
-							onClick={()=> setSelectCard(index)}
-						/>)
-					)}
-				</div>
+			{!readingResult &&  ( <div className='cardContainer'>
+				{facedowCards.map((item, index) => (
+					<img
+						key={index}
+						className='facedown'
+						src="/images/thecover.png"
+						alt="Select a card"
+						onClick={() => setSelectCard(index)}
+					/>)
+				)}
+			</div>
+			)}
 
-				<div className='getButton'>
-					<button className='getReadingBtn' onClick={handleReading}>Get Tarot Reading</button>
+			{readingResult && <CardDetail card={readingResult} />}
+
+			<div className='getButton'>
+				<button className='getReadingBtn' onClick={handleReading}>
+					{readingResult ? "Get another card" : "Get Tarot Reading"}
+				</button>
+			</div>
 
 
-				</div>
 
-
-			
 		</div>
 	)
 }
