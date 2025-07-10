@@ -24,7 +24,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 100px;
+ 
 }
 
 .getReadingBtn {
@@ -72,9 +72,9 @@
 
 display: flex;
 
-justify-content: space-evenly;
-margin-top: 100px;
-
+justify-content: center;
+margin-top: 50px;
+gap: 100px;
 
 
 }
@@ -88,7 +88,7 @@ text-align: center;
 }
 
 .card-image {
-  width: 250px;
+  width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 10px grey;
   margin-bottom: 20px;
@@ -96,7 +96,7 @@ text-align: center;
 }
 
 .sections p {
-  max-width: 500px;
+  max-width: 800px;
   color: #c1121f;
   font-weight: 400;
 

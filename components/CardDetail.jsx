@@ -4,7 +4,6 @@ const CardDetail = ({ card }) => {
         return <p>Loading card</p>
     }
 
-    console.log("🔮 CardDetail received:", card);
     return (
 
         <div className="container">
