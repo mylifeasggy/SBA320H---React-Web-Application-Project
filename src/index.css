@@ -20,11 +20,18 @@
 
 }
 
+.subtitle {
+    text-align: center;
+     font-size: 20px;
+    font-weight: 800;
+    color: #c09bd8;
+}
+
 .getButton {
     display: flex;
     justify-content: center;
     text-align: center;
- 
+
 }
 
 .getReadingBtn {
@@ -32,9 +39,23 @@
     border-radius: 5px;
     border: 2px solid #c1121f;
     font-size: 20px;
+    font-weight: 400;
     background-color: white;
     color: #c1121f;
     cursor: pointer;
+    margin: 10px;
+}
+
+.horoscopoBtn {
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #c1121f;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: white;
+    color: #c1121f;
+    cursor: pointer;
+    margin: 10px;
 }
 
 .facedown {
@@ -48,11 +69,7 @@
 
 }
 
-.selected {
-  transform: translateY(-30px) scale(1.1);
-  box-shadow: 0 0 30px #c09bd8;
-  z-index: 10;
-}
+
 
 .cardContainer {
 
@@ -65,47 +82,55 @@
 
 .facedown:hover {
 
+    transform: translateY(-30px) scale(1.05);
+    box-shadow: 0 0 30px #c09bd8;
+    z-index: 10;
+
+
+}
+.facedown-click {
+
     transform: translateY(-20px) scale(1.05);
     box-shadow: 0 0 25px #c09bd8;
     z-index: 10;
-   
 
 }
 
 /* CARD DETAIL JSX */
 .container {
 
-display: flex;
+    display: flex;
 
-justify-content: center;
-margin-top: 50px;
-gap: 100px;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 100px;
 
 
 }
+
 .card-detail {
-text-align: center;
-  padding: 40px;
-  background: #fff2f7;
-  color: #5e3353;
-  font-family: 'Poppins', sans-serif;
-  
+    text-align: center;
+    padding: 40px;
+    background: #fff2f7;
+    color: #5e3353;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .card-image {
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px grey;
-  margin-bottom: 20px;
-  
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px grey;
+    margin-bottom: 20px;
+
 }
 
 .sections p {
-  max-width: 800px;
-  color: #c1121f;
-  font-weight: 400;
+    max-width: 800px;
+    color: #c1121f;
+    font-weight: 400;
 
-  
+
 }
 
 #cardname {
@@ -113,13 +138,42 @@ text-align: center;
     color: #c1121f;
     font-weight: 400;
     font-size: medium;
-  
+
 
 }
+/* SECOND PAGE HOROSCOPO */
 h3 {
     text-align: center;
     font-weight: 800;
-     color: #c1121f;
+    color: #c1121f;
+
 
 }
 
+.horoscopo-container {
+ font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    color: #c1121f;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.dtBtn {
+  padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #c1121f;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: white;
+    color: #c1121f;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.dtBtn:hover {
+    color: #5e3353;
+    background-color: #c1121f;
+}

@@ -1,10 +1,6 @@
 
-
-
-
-
-export const Horoscopo = async () => {
-
+export async function Horoscopo() {
+  
 const api_key=  import.meta.env.VITE_API_KEY;
 const token = import.meta.env.VITE_AUTH_TOKEN;
 
@@ -13,6 +9,7 @@ const token = import.meta.env.VITE_AUTH_TOKEN;
   form.append("lan", "en");
 
   try {
+    
     const response = await fetch('https://astroapi-5-translator.divineapi.com/api/v2/daily-horoscope', {
       method: "POST",
       headers: {

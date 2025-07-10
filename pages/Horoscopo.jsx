@@ -4,11 +4,14 @@ import { Link } from "react-router-dom";
 const HoroscopoDaily = () => {
     return (
 
-        <div>
-            <h2>Working on int </h2>
-            <Link to="/"> Daily Tarot</Link>
+        <div className="horoscopo-container">
+            <div className="content">
+                <h2>COMING SOON 🔮 </h2>
+            
+                <Link to="/"> <button className="dtBtn"> Daily Tarot </button> </Link>
+                </div>
         </div>
-       
+
     );
 }
 

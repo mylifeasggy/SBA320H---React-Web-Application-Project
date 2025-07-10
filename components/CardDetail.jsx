@@ -1,9 +1,6 @@
 
 const CardDetail = ({ card }) => {
-    if (!card) {
-        return <p>Loading card</p>
-    }
-
+ 
     return (
 
         <div className="container">

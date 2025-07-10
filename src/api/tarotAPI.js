@@ -1,5 +1,5 @@
-export const TarotReading = async () => {
-
+export async function  TarotReading() {
+  
 const api_key=  import.meta.env.VITE_API_KEY;
 const token = import.meta.env.VITE_AUTH_TOKEN;
 
@@ -24,3 +24,4 @@ const token = import.meta.env.VITE_AUTH_TOKEN;
     console.error("Fetch error:", error);
   }
 }
+

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 
 const MainBoard = () => {
 
+const [readingResult, setReadingResult] = useState(null)
+const [selectedCard, setSelectCard] = useState(null)
 
 	const facedowCards = [];
 	for (let i = 0; i < 12; i++) {
@@ -14,17 +16,16 @@ const MainBoard = () => {
 	const Cardsrow = facedowCards.map((item, index) => (
 		<img
 			key={index}
-			className='facedown'
+			className={`facedown ${selectedCard === index ? "facedown-click" : ""}`}
 			src="/images/thecover.png"
 			alt="Select a card"
 			onClick={() => setSelectCard(index)}
 
 		/>))
 		
-const [readingResult, setReadingResult] = useState(null)
-const [selectedCard, setSelectCard] = useState(null)
 
-const handleReading = async () => {
+async function handleReading() {
+
 
 	if (readingResult) {
 		setReadingResult(null);
@@ -62,11 +63,16 @@ return (
 			<button className='getReadingBtn' onClick={handleReading}>
 				{readingResult ? "Get another card" : "Get Tarot Reading"}
 			</button>
-			<Link to="/Horoscopo"> <button className='getReadingBtn'> HoroscopoDaily</button> </Link>
+
+		 <Link to="/Horoscopo"> <button className='horoscopoBtn'> HoroscopoDaily</button> </Link>
+
 		</div>
+
+
 	</div>
 );
 
 }
 export default MainBoard;
 
+// WHAT IF,hear me outt i do the React route and I leave the other page empty? just with a button to go back to the main page🤣
