@@ -19,7 +19,7 @@ Whether you’re manifesting, soul-searching, or just vibing — this site is fo
 # “Mucho, mucho amor.” 💫💋
 
 # Live DEMO💫💋
-[MuchoMuchoAmor](muchomuchoamor.netlify.app)
+[MuchoMuchoAmor](https://app.netlify.com/projects/muchomuchoamor/deploys)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a3ac10ed-d362-4adb-a3bf-2dee901eb427/deploy-status?branch=main)](https://app.netlify.com/projects/muchomuchoamor/deploys)
 
