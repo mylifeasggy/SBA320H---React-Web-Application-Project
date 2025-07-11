@@ -18,8 +18,8 @@ Whether you’re manifesting, soul-searching, or just vibing — this site is fo
 # And remember, baddie...
 # “Mucho, mucho amor.” 💫💋
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8ce800a9-8048-48af-a889-9756c805fee5/deploy-status?branch=main)](https://app.netlify.com/projects/muchomuchoamor/deploys)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a3ac10ed-d362-4adb-a3bf-2dee901eb427/deploy-status?branch=main)](https://app.netlify.com/projects/muchomuchoamor/deploys)
 
 
 
